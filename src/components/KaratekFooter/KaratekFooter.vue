@@ -102,12 +102,9 @@
 <style lang="scss">
 @import "../../styles/carbon-utils";
 .karatek__footer {
-  position: relative;
-  width: 100%;
   padding: 1rem;
   background-color: $ui-05;
   color: $ui-02;
-  bottom: 0;
 }
 
 .karatek__footer_text {
