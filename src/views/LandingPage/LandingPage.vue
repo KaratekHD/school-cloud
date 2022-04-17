@@ -118,7 +118,6 @@ export default {
 .landing-page__r3 {
   padding-top: $spacing-09;
   padding-bottom: $spacing-09;
-  @include landing-page-background;
 }
 .landing-page__label {
   @include carbon--type-style("heading-01");
