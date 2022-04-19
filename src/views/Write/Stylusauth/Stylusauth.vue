@@ -7,7 +7,7 @@
             <cv-link to="/">Home</cv-link>
           </cv-breadcrumb-item>
           <cv-breadcrumb-item>
-            <cv-link to="#">Write</cv-link>
+            <cv-link to="/write">Write</cv-link>
           </cv-breadcrumb-item>
           <cv-breadcrumb-item>
             <cv-link href="#" aria-current="page">Authentication</cv-link>
@@ -58,7 +58,7 @@
               <img
                 class="landing-page__img"
                 width="75%"
-                src="https://vue-step-6--carbon-tutorial-vue.netlify.app/img/tab-illo.296fdb9e.png"
+                src="@/assets/tab-illo.png"
                 alt="Stylusboard Authentication"
               />
             </div>
@@ -136,8 +136,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../styles/carbon-utils";
-@import "../LandingPage/mixins";
+@import "../../../styles/carbon-utils";
+@import "../../LandingPage/mixins";
 
 .stylusauth-page__head {
   padding-left: $spacing-02;

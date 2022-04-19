@@ -3,7 +3,7 @@
     <cv-skip-to-content href="#main-content"
       >Skip to content</cv-skip-to-content
     >
-
+    <cv-header-menu-button aria-label="Header menu" aria-controls="side-nav" />
     <cv-header-name to="/" prefix="Karatek">School Cloud</cv-header-name>
     <cv-header-nav>
       <cv-header-menu title="Nextcloud">
@@ -33,11 +33,12 @@
         href="https://cloud.yourkara.tech/apps/riotchat/"
         >Chat</cv-header-menu-item
       >
-      <cv-header-menu-item aria-label="Stylusauth" to="/stylusauth"
+      <cv-header-menu-item aria-label="Stylusauth" to="/write/auth"
         >Stylusauth</cv-header-menu-item
       >
       <!--<cv-header-menu-item aria-label="Devel" to="/stylusauth">Devel</cv-header-menu-item>-->
     </cv-header-nav>
+
     <template v-slot:header-global>
       <cv-header-global-action
         v-if="$keycloak.authenticated"
@@ -71,6 +72,44 @@
       >
         <app-switcher-20 />
       </cv-header-global-action>
+    </template>
+    <template v-slot:left-panels>
+      <cv-side-nav id="side-nav" fixed>
+        <cv-side-nav-items>
+          <cv-header-side-nav-items>
+            <cv-header-menu title="Nextcloud">
+              <cv-header-menu-item
+                aria-label="Dashboard"
+                href="https://cloud.yourkara.tech/apps/dashboard/"
+                >Dashboard</cv-header-menu-item
+              >
+              <cv-header-menu-item
+                aria-label="Files"
+                href="https://cloud.yourkara.tech/apps/files/"
+                >Files</cv-header-menu-item
+              >
+              <cv-header-menu-item
+                aria-label="Deck"
+                href="https://cloud.yourkara.tech/apps/deck/#/board/6"
+                >Deck</cv-header-menu-item
+              >
+            </cv-header-menu>
+            <cv-header-menu-item
+              aria-label="HedgeDoc"
+              href="https://md.yourkara.tech/"
+              >HedgeDoc</cv-header-menu-item
+            >
+            <cv-header-menu-item
+              aria-label="Chat"
+              href="https://cloud.yourkara.tech/apps/riotchat/"
+              >Chat</cv-header-menu-item
+            >
+            <cv-header-menu-item aria-label="Stylusauth" to="/write/auth"
+              >Stylusauth</cv-header-menu-item
+            >
+          </cv-header-side-nav-items>
+        </cv-side-nav-items>
+      </cv-side-nav>
     </template>
     <template v-slot:right-panels>
       <cv-header-panel id="switcher-panel">

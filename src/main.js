@@ -8,12 +8,15 @@ import VueKeyCloak from "@dsb-norge/vue-keycloak-js";
 
 let keycloak_config = {
   config: {
-    realm: "master",
-    url: "https://auth.karatek.net/auth",
-    clientId: "test",
+    realm: process.env.VUE_APP_KEYCLOAK_REALM,
+    url: process.env.VUE_APP_KEYCLOAK_URL,
+    clientId: process.env.VUE_APP_KEYCLOAK_CLIENT_ID,
   },
   init: {
     onLoad: "check-sso",
+  },
+  logout: {
+    redirectUri: process.env.VUE_APP_KEYCLOAK_LOGOUT_REDIRECT_URL,
   },
 };
 

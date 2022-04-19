@@ -13,12 +13,23 @@ const router = new Router({
       component: LandingPage,
     },
     {
-      path: "/stylusauth",
+      path: "/write/auth",
       name: "stylusauth",
-      component: () => import("./views/Stylusauth"),
+      component: () => import("./views/Write/Stylusauth"),
       meta: {
         requiresAuth: true,
       },
+    },
+    /*{
+      path: "/write",
+      name: "write",
+      component: () => import("./views/Write/Introduction"),
+    },
+     */
+    {
+      path: "*",
+      name: "404",
+      component: () => import("./views/NotFoundPage"),
     },
   ],
 });
